@@ -16,5 +16,11 @@ favourite_languages = {'Alex':'C++',
                        'John Snow':'Python'
                        }
                     
-for name,language in favourite_languages.items():
-    print(name.title(),'s favourite languages:', language)
+friends = ['Alex','Lena']
+
+for name in favourite_languages.keys():
+    print()
+
+
+
+
