@@ -8,7 +8,7 @@ for key,value in user.items():
     print('Value:', value)
     print(' ' *100)
 
-
+#перебор словаря
 favourite_languages = {'Alex':'C++',
                        'Sara':'Java',
                        'Lena':'C#',
@@ -19,8 +19,9 @@ favourite_languages = {'Alex':'C++',
 friends = ['Alex','Lena']
 
 for name in favourite_languages.keys():
-    print()
+    print(name.title())
 
-
+    if name in friends:
+        print('Привет,',name.title(),'твой любимый язык программирования',favourite_languages[name])
 
 
