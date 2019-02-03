@@ -1,7 +1,7 @@
 #Создаём пустой список, для хранения Зомборей
 zombies = []
 #Создаём армию зомби для игры Терриконщики против ЗОМБИ
-for zombie_number in range(1,30):
+for zombie_number in range(0,30):
     new_zombie = {'speed':'slow','color':'green','points':5}
     zombies.append(new_zombie)
 
