@@ -8,7 +8,7 @@ else:
 
 
 #life is so hard when this code work 
-avaibale_toppings = ['mushrooms','extra cheese','green peppers'
+avaibale_toppings = ['mushrooms','extra cheese','green peppers',
                      'olivies', 'anchous','pineapple']
 request_toppings = ['mushrooms','olivies','french fries','pineapple']
 

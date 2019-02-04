@@ -3,7 +3,7 @@ users = ['admin','eric','oliver','lars','jimmy']
 
 for user in users:
     if user == 'admin':
-        print('Hello ', users[0])
+        print('Hello Админастратор ', users[0])
     elif user == 'eric':
         print('Heloу мазифака по имени', user)
     elif user == 'oliver':

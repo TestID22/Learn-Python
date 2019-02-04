@@ -1,5 +1,5 @@
 #Task для перебора имён в списке
-def magicians_name(namelist,namelist_2):
+def make_magicians_great(namelist,namelist_2):
     while namelist:
         name = namelist.pop()
         print('Great ' +  name)
@@ -9,12 +9,9 @@ def show_magicians(users):
     for user in users:
         print(user)
 
-    
-    
-
 magicians = ['David Blane','David','Davids']
 great = []
 
-magicians_name(magicians[:],great)
+make_magicians_great(magicians[:],great)
 show_magicians(great)
 print(magicians)
