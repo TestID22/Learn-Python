@@ -1,3 +1,3 @@
-import pizza
+from pizza import *
 
-pizza.make_pizza(15,'Грибы','Курочка','Ананас','Сыр')
+make_pizza(15,'Грибы','Курочка','Ананас','Сыр')
