@@ -22,8 +22,16 @@ class Car():
         else:
             print('Чувак не хитри, оматать не выйдет!')
 
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+
+
 my_car = Car('Mitsubishi','Outlander','2010')
 print(my_car.full_info())
 my_car.increment_odometr(30)
 my_car.update_odometr(300)
 my_car.show_odometr()
+
+my_tesla = ElectricCar('tesla','model s', '2017')
+print(my_tesla.full_info())
