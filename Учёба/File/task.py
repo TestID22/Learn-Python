@@ -5,5 +5,6 @@ while True:
     if name_user == 'quit':
         break
     with open('guess.txt','a') as guess_book:
-        guess_book.write(name_user + '\n')
+        
+guess_book.write(name_user + '\n')
    
