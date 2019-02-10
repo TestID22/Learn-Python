@@ -1,6 +1,7 @@
 import sys
 import pygame
 
+from ship import Ship
 from settings import Settings 
 
 #Function котороая запускает игру и инициализирует параметры
