@@ -12,7 +12,7 @@ def run_game():
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption('Инопланетное вторжение')
     ship = Ship(screen)
-
+    
     while True:
         
         for event in pygame.event.get():
@@ -21,6 +21,7 @@ def run_game():
         #При каждом проходе цикла перерисовывается экран
         screen.fill(ai_settings.bg_color) 
         ship.blitme()       
+        
         #Flip - отрисовывает последнего прорисованного экрана
         pygame.display.flip()
        

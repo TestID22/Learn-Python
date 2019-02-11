@@ -11,8 +11,7 @@ class Dog():
         
 
 dog_1 = Dog('jess','12')
+dog_2 = Dog('Adelle','8')
 
-print('Мою собаку зовут', dog_1.name.title())
-print('Ей',dog_1.age)
-dog_1.sit()
-dog_1.rolling()
+print(dog_2.name)
+
