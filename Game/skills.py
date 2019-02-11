@@ -4,7 +4,7 @@ import sys
 
 win = pygame.display.set_mode((500, 600))
 pygame.display.set_caption("Happy Pink Square")
-
+#my_image = pygame.image.load('======')
 x = 450
 y = 500
 width = 30
@@ -13,7 +13,7 @@ speed = 10
 
 
 while True:
-    pygame.time.delay(30)
+   # pygame.time.delay(1)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -27,6 +27,8 @@ while True:
         x -= speed
     if keys[pygame.K_d] and x < 460:
         x += speed
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        x,y = event.pos
 
     
     win.fill((0,0,0))      

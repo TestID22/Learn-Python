@@ -1,8 +1,10 @@
 import sys
 import pygame
+import game_functions as gf
 
 from ship import Ship
 from settings import Settings 
+
 
 #Function котороая запускает игру и инициализирует параметры
 def run_game():
@@ -14,17 +16,8 @@ def run_game():
     ship = Ship(screen)
     
     while True:
-        
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-        #При каждом проходе цикла перерисовывается экран
-        screen.fill(ai_settings.bg_color) 
-        ship.blitme()       
-        
-        #Flip - отрисовывает последнего прорисованного экрана
-        pygame.display.flip()
-       
+        gf.check_events(ship)
+        gf.screen_update(ai_settings, screen, ship)
 
 run_game()
 
