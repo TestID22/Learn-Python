@@ -10,7 +10,7 @@ def check_events(ship):
 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_d:
-                ship.rect.centerx += 10
+                ship.rect.bottom += 10
             elif event.key == pygame.K_a:
                 ship.rect.centerx -= 10
 

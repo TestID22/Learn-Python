@@ -16,6 +16,8 @@ while guess != secret and user_try < 6:
     user_try += 1
 
 if guess == secret:
-    print('Хватит, чебур ты угадал, я отпущу тебя')
+    print('Хватит, ЧЕБУР ты угадал, я отпущу тебя')
+    input('ВВедите Enter для выхода')
 else:
     print('Я отпущу тебя на корм акулам')
+    input('ВВедите Enter для выхода')
