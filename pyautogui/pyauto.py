@@ -3,10 +3,12 @@ import time
 
 time.sleep(1)
 x = 500
+y = 500
+#Отключаем спасалку для юзеров
 pyautogui.FAILSAFE = False
-print('Петушок')
+print('Зря ты меня запустил')
+pyautogui.typewrite('Hello world!',)
 while True:
-    
-    pyautogui.moveTo(x,176, 1)
-    x += 10
+    if x > 0:
+        pyautogui.moveTo(x,y, 1)
     
