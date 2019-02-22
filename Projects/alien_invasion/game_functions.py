@@ -10,9 +10,19 @@ def check_events(ship):
 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_d:
-                ship.rect.bottom += 10
+                ship.moving_right = True
             elif event.key == pygame.K_a:
-                ship.rect.centerx -= 10
+                ship.moving_left = True
+
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_d:
+                ship.moving_right = False 
+            elif event.key == pygame.K_a:
+                ship.moving_left = False
+        
+        
+
+           
 
 def screen_update(ai_settings, screen, ship,):
     screen.fill(ai_settings.bg_color) 

@@ -1,11 +1,11 @@
-import sys
+import sys,os
 import pygame
 import game_functions as gf
 
 from ship import Ship
 from settings import Settings 
 
-
+os.chdir(r'd:\code\python\projects\alien_invasion')
 #Function котороая запускает игру и инициализирует параметры
 def run_game():
     pygame.init()  
@@ -18,6 +18,6 @@ def run_game():
     while True:
         gf.check_events(ship)
         gf.screen_update(ai_settings, screen, ship)
-
+        ship.update()
 run_game()
 
