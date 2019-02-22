@@ -2,9 +2,11 @@ import pygame
 
 class Ship():
     
-    def __init__(self, screen):
+    def __init__(self, ai_settings, screen):
         '''Инициализирует корабль и создаёт его начальную позицию'''
         self.screen = screen
+        self.ai_settings = ai_settings
+
         self.screen_rect = screen.get_rect()
         #Загрузка спрайта главного героя и получение прямоугольника
         self.image = pygame.image.load('images\хачан.jpg')
@@ -17,7 +19,10 @@ class Ship():
         #флаг для непрерывного передвижения 
         self.moving_right = False
         self.moving_left = False
-        
+
+        #Сохранение вещественной координаты корабля
+        self.center = float(self.rect.centerx)
+
     def update(self):
         if self.moving_right:
             self.rect.centerx += 1
