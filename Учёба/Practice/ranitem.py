@@ -3,8 +3,11 @@ import random
 
 rand_list = ['One','two','three','four','five','six','seven']
 
+def rand_item(random_list):
+    rand_num = random.randint(0, len(random_list) -1)
+    print(rand_num)
 
-rand_num = random.randint(0, len(rand_list) -1)
-index =rand_list[0]
-print(rand_num)
-print(index)
+rand_item(rand_list)
+
+
+
