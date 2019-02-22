@@ -7,3 +7,4 @@ username = ['ламер','Нуб']
 noobs_team_creator = ['Гена - Компилятор','Жёстки - Кирилл']
 say_hello(username)
 say_hello(noobs_team_creator)
+say_hello('Ваня')
