@@ -5,6 +5,7 @@ class Ship():
     def __init__(self, ai_settings, screen):
         '''Инициализирует корабль и создаёт его начальную позицию'''
         self.screen = screen
+
         self.ai_settings = ai_settings
 
         self.screen_rect = screen.get_rect()
@@ -28,6 +29,8 @@ class Ship():
             self.rect.centerx += 1
         if self.moving_left:
             self.rect.centerx -= 1
+
+        self.rect.centerx = self.center
 
     def blitme(self):
         '''Рисует корабль в текущей позиции'''
