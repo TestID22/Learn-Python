@@ -1,4 +1,19 @@
 *pyc
 *spec
 *Django
-
+#подтянул у Муренчика
+*.log
+.idea
+*.jar
+*.pyc
+.cache
+reports
+dist
+build
+*.egg-info
+result.xml
+checkstyle.*
+junit.xml
+modified_test.jmx
+.pytest_cache
+db.sqlite3
