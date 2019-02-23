@@ -13,7 +13,7 @@ speed = 10
 
 
 while True:
-    pygame.time.delay(1)
+    pygame.time.delay(10)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
