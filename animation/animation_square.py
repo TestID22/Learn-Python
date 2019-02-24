@@ -16,14 +16,15 @@ UPLEFT = 'upleft'
 UPRIGHT = 'upright'
 
 SPEED = 2
+
 white = (255,255,255)
 red = (255,0,0)
 green = (0,255,0)
+
 x = 0
 y = 150
 
 box_1 = {'rect':pygame.Rect(0, 100, 40,40),'color':green, 'dir':DOWNRIGT}
-
 
 while True:
     pygame.time.delay(10)
@@ -31,8 +32,6 @@ while True:
         if event.type == pygame.QUIT:
             sys.exit()
 
-
-   
         if box_1['dir'] == DOWNRIGT:
             box_1['rect'].left += SPEED
             box_1['rect'].top += SPEED
@@ -66,11 +65,6 @@ while True:
                 box_1['dir'] = DOWNLEFT
             if box_1['dir'] == UPRIGHT:
                 box_1['dir'] = UPLEFT    
-
-   
-       
-
-
 
         screen.fill(white)  
         pygame.draw.rect(screen, box_1['color'],box_1['rect'])
