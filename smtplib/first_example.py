@@ -18,4 +18,5 @@ TEXT = input('ВВеди Текс Сообщение(только Латинск
 smtpObj.sendmail('YOUR_EMAI@gmail.com',
                  'TARGET_EMAIL@yahoo.com',
                  'Subject: Test \n' + TEXT)
+        
 smtpObj.quit()
