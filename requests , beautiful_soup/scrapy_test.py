@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 
-url = urlopen('http://novogrodovka-rada.gov.ua/')
+url = urlopen('http://grompe.org.ru/static/prog_comp_matrix_ru.html')
 #создаём объект супа
 bso = BeautifulSoup(url)
 print(bso.a)

@@ -9,4 +9,4 @@ def getTitle(url):
     print(scrapy.h1.get_text())
     
 
-getTitle('http://novogrodovka-rada.gov.ua/')
+getTitle('http://grompe.org.ru/static/prog_comp_matrix_ru.html')

@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 
 #Скрапим HTML 
-html = urlopen('http://girnyk.dn.ua/')
+html = urlopen('http://grompe.org.ru/static/prog_comp_matrix_ru.html')
 
 #Создаём объект класса BS
 beautifulsoup_object = BeautifulSoup(html.read())
