@@ -4,7 +4,7 @@ import sys
 #Установка разрешения экрана игры
 win = pygame.display.set_mode((500, 600))
 #Тут подпись вкладки 
-pygame.display.set_caption("Гавно")
+pygame.display.set_caption("Pygame")
 
 #переменные игррка и игры в целом
 x = 450
