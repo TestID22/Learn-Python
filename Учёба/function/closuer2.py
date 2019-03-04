@@ -5,4 +5,6 @@ def f1():
         print(x)
     f2()
 f1()
-print(x)
+
+f = f1(2)
+print(f(3))
