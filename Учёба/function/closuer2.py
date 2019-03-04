@@ -1,10 +1,7 @@
-x = 88
-def f1():
-    x = 100
-    def f2():
-        print(x)
-    f2()
-f1()
+def maker(n):
+    def action(x):
+        return x * n
+    return action
 
-f = f1(2)
-print(f(3))
+f = maker(2)
+print(f(4))
