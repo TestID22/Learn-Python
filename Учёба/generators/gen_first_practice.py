@@ -15,7 +15,7 @@ lines = f.readlines()
 lines = [line.rstrip() for line in lines]
 print(lines)
 
-#Сокращаем код
+#Сокращаем код  убирает символ окончания строки
 print('Короткий список = код в одной строке')
 short_code_lines = [line.rstrip() for line in open('1.txt')]
 print(short_code_lines)
