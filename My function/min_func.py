@@ -5,4 +5,4 @@ def find_min_func(*args):
             res = i
             return res
 
-print(find_min_func(1, 91, 20, -1, 23, 13))
+print(find_min_func(1, 91, 5, 2, 20, -1, 23, 13))
