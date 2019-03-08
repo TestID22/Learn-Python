@@ -22,3 +22,5 @@ for i in for_min[1:]:
         res.append(i)
         print(res)
 ###########################        
+
+
