@@ -5,3 +5,4 @@ def action(x):
 act = action(2)
 act(3)
 print(act(3))
+
