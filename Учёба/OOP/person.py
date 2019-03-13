@@ -4,9 +4,10 @@ class Person():
         self.job = job 
         self.pay = pay
         
+if __name__ == "__main__":
 
-darling = Person('Darling')
-elliot = Person('Elliot', job='Engineer',pay='40 000')
+    darling = Person('Darling')
+    elliot = Person('Elliot', job='Engineer',pay='40 000')
 
 print(darling.name, darling.pay)
 print(elliot.name, elliot.pay)
