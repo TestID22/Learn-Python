@@ -27,6 +27,12 @@ class Main():
                 if i.type == pygame.QUIT:
                     sys.exit()
                 
+                if i.type == pygame.KEYDOWN:
+                    if i.key == pygame.K_RIGHT:
+                        self.player.pos_x += 10
+                    if i.key == pygame.K_LEFT:
+                        self.player.pos_x -= 10
+
             self.render()
 
             
