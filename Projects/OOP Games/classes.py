@@ -6,6 +6,7 @@ class Player():
         self.name = 'MyAsleepReflection'
         self.pos_x = 50
         self.pos_y = 340
+        self.moving_right = False
       
     def render(self, screen):
         screen.blit(self.image,(self.pos_x,self.pos_y,100,150))

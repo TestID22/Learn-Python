@@ -3,7 +3,7 @@ import pygame
 from classes import Player
 
 pygame.init()
-screen = pygame.display.set_mode((800,500))
+screen = pygame.display.set_mode((1000,500))
 pygame.display.set_caption('My Asleep Reflections')
 
 class Main():
@@ -27,11 +27,11 @@ class Main():
                 if i.type == pygame.QUIT:
                     sys.exit()
                 
-                if i.type == pygame.KEYDOWN:
-                    if i.key == pygame.K_RIGHT:
-                        self.player.pos_x += 10
-                    if i.key == pygame.K_LEFT:
-                        self.player.pos_x -= 10
+            keys = pygame.key.get_pressed()
+            if keys[pygame.K_d]:
+                self.player.pos_x += 2
+            if keys[pygame.K_a]:
+                self.player.pos_x -= 2
 
             self.render()
 
