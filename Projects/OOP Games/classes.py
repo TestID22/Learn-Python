@@ -6,4 +6,4 @@ class Player():
         self.name = 'Вова Кудрявый'
       
     def render(self, screen):
-        self.screen.blit(self.image(50,50))
+        self.screen.blit(self.image(50,50),(300,40,50,50))
