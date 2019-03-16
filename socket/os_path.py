@@ -5,4 +5,4 @@ print(user)
 
 file_paths = ['bin', 'user']
 for i in file_paths:
-    print(os.path.join('C:/users\\'), i.strip())
+    print(os.path.join('C:/users/'), i.strip())

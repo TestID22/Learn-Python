@@ -1,7 +1,7 @@
 import socket 
 
 URLS = {
-    '/':'hello index',
+    '/':'Lena I love you <3',
     '/blog':'hello blog'
 }
 
