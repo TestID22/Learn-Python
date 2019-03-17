@@ -3,7 +3,7 @@ def func_min(*args):
     for i in args[1:]:
         if i < res:
             res = i
-            return res
+    return res
             
 
 print(func_min(3,17,3,9,19))
