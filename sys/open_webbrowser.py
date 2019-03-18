@@ -1,7 +1,3 @@
 import os
 
-
-
-while 1:
-    os.startfile('https://www.google.com')
-    
+os.startfile('https://www.google.com')
