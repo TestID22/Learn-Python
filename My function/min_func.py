@@ -1,8 +1,9 @@
-def find_min_func(*args):
+def func_min(*args):
     res = args[0]
     for i in args[1:]:
         if i < res:
             res = i
     return res
+            
 
-print(find_min_func(1, 91, 5, 2, 20, -1, 23, 13))
+print(func_min(3,17,3,9,19))
