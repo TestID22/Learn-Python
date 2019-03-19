@@ -1,7 +1,7 @@
 *pyc
 *spec
 *Django
-#подтянул у Муренчика
+#пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 *.log
 .idea
 *.jar
@@ -17,3 +17,4 @@ junit.xml
 modified_test.jmx
 .pytest_cache
 db.sqlite3
+.vscode/settings.json
