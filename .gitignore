@@ -18,3 +18,4 @@ modified_test.jmx
 .pytest_cache
 db.sqlite3
 .vscode/settings.json
+programming.py

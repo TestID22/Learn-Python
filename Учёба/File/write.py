@@ -1,4 +1,4 @@
-filename = 'programming.txt'
+filename = 'programming.py'
 text_filename = 'text.txt'
 
 with open(filename, 'w') as write_oject:
@@ -11,5 +11,7 @@ with open(filename, 'r') as read_object:
         print(i.rstrip())
 with open(filename, 'a') as write_object:
     write_object.write('def dumbas(self):\n')
-    write_object.write('\t print("I hate this code")')
-    print(filename)
+    write_object.write('\tprint("I hate this code")')
+    
+read_filename = open (filename, 'r')
+stroke = read_filename.read()
