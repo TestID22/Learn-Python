@@ -1,5 +1,5 @@
 import threading, time
-
+#не рабочий поток
 count = 0
 def adder():
     global count
