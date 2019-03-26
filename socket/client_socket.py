@@ -1,6 +1,6 @@
 import sys 
 from socket import *
-
+#Клиент
 serverHost = 'localhost'
 serverPort = 9000
 
