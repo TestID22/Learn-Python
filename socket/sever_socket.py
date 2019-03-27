@@ -16,7 +16,7 @@ socket_object.listen(1)
 
 while True:
     connecetion, adress = socket_object.accept()#ждём запрос
-    print(' server connect ', adress)
+    print('server connect by ', adress)
 
     while True:
         data = connecetion.recv(1024)
