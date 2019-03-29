@@ -6,4 +6,10 @@ email_regex = re.compile('[A-Za-z0-9\._+]+@[A-Za-z]+\.(com)')
 file = [x.rstrip() for x in open('email_list.txt')]
 #конвертируем в тип Str
 e_finder = email_regex.search(str(file))
-print(e_finder.group())
+
+email_adress = []
+
+for i in e_finder:
+    email_adress.append(i)
+
+print(email_adress)
