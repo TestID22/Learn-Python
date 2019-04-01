@@ -6,7 +6,7 @@ class AnonymousSurvey():
 
     def show_question(self):
         '''Выводит вопрос'''
-        print(question)
+        print(self.question)
 
     def store_response(self, new_response):
         #СОХРАНЯЕТ ОТВЕТ В СПИСКЕ
