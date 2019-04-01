@@ -6,5 +6,11 @@ class test_get_formated_name(unittest.TestCase):
     def test_get_name(self):
         formated_name = get_formated_name('Alex','Sabadash')
         self.assertEqual(formated_name, 'Alex Sabadash')
+    def test_with_three_arg(self):
+        '''Работают ли имена с Тремя Аргументами c Отчеством'''
+        formated_name = get_formated_name('Sabadash', 'Alex', 'Vitalievich')
+        self.assertEqual = (formated_name, 'Sabadash Alex Vitalievich')
+
+
 #Получим ошибку...
 unittest.main()
