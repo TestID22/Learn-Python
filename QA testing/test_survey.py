@@ -11,4 +11,18 @@ class TestAnonymousSurvey(unittest.TestCase):
 
         self.assertIn('English', my_survey.responses)
 
+    def test_store_three_response(self):
+        '''тестируем на наличие трёх элементов в списке'''
+        question = 'What first Language do you speak?'
+        my_survey = AnonymousSurvey(question)
+        responses = ['English', 'Spanish', 'Python']
+        #Из списка responses берём Языки и добавляем в список, 
+        # при помощи метода my_survey.store_response 
+        for response in responses:
+            my_survey.store_response(response)
+        #Проверяем есть ли в списке каждый элемент из списка responses - ГАДДЭМ!!!
+        for response in responses:
+            self.assertIn(response, my_survey.responses) 
+               
+
 unittest.main()
