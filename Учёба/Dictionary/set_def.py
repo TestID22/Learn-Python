@@ -1,11 +1,18 @@
 
 very_dif_dictionary = {'elliot':'hacker', 'age': 23, 'pay': 40000 }
 
+
+#Добавдляем информацию в словарь различными способами
 very_dif_dictionary.setdefault('status', 'alive')
 
+very_dif_dictionary['sister'] = 'Darling'
+
 for key, value in very_dif_dictionary.items():
-    print('Ключь:', key, '\n')
+    print('Ключ:', key, '\n')
     print('Значениt:', value, '\n')
+
+
+
 
 print(
 ''' 
