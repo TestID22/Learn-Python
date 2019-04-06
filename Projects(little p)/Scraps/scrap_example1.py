@@ -15,7 +15,7 @@ def get_title(url):
         return None 
     return title
 
-title = get_title('https://mrrobot.fandom.com/')
+title = get_title('https://www.google.com/')
 if title == None:
     print('Заголовок не найден, но сайт есть...=(')
 else:
