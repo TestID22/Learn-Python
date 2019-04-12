@@ -1,8 +1,9 @@
 import requests
+import csv
 from bs4 import BeautifulSoup
 
 
-url = 'https://www.olx.ua/elektronika/don/q-%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80/'
+url = 'https://www.olx.ua/elektronika/q-%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80/'
 headers = {
             'User-Agent':\
             'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-en) \
@@ -24,17 +25,30 @@ def getAllLinks(html):
 
     return links
 
-    
+def getPageData(html):
+    soup = BeautifulSoup(html)
+    try:
+        h1 = soup.find('div',class_='offer-titlebox')
+    except:
+        h1 = ''
 
-            
+    try:
+        price = soup.find('strong',class_='xxxx-large not-arranged').text.strip()
+    except:
+        price = ' '
+    
+    data = {'name': h1,
+            'price': price}
+    
+#Основная функция, для работы всего скрипта
 def main():
-    html = getHtml(url)
-    parse_links = getAllLinks(html)
-    for i in parse_links:
-        print(i)
+    all_links = getAllLinks(getHtml(url))
+    for link in all_links:
+        html_data = getHtml(link)
+        result = getPageData(html_data)
+        print(result)
+        
     
-
-
 
 
 if __name__ == "__main__":
