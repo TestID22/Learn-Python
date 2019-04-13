@@ -1,6 +1,7 @@
 import requests
-import csv
+
 from bs4 import BeautifulSoup
+
 
 
 url = 'https://www.olx.ua/elektronika/q-%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80/'
@@ -28,7 +29,7 @@ def getAllLinks(html):
 def getPageData(html):
     soup = BeautifulSoup(html)
     try:
-        h1 = soup.find('div',class_='offer-titlebox')
+        h1 = soup.find('div',id='offerdescription').find('h1').text.strip()
     except:
         h1 = ''
 
@@ -39,7 +40,11 @@ def getPageData(html):
     
     data = {'name': h1,
             'price': price}
-    
+            
+    return data
+
+
+
 #Основная функция, для работы всего скрипта
 def main():
     all_links = getAllLinks(getHtml(url))
@@ -49,7 +54,5 @@ def main():
         print(result)
         
     
-
-
 if __name__ == "__main__":
     main()
