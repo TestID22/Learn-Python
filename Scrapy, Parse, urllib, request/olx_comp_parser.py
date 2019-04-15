@@ -43,11 +43,6 @@ def getPageData(html):
             
     return data
 
-def saveText(data):
-    data = open('data.txt', 'w') as f:
-        f.write
-
-
 #Основная функция, для работы всего скрипта
 def main():
     all_links = getAllLinks(getHtml(url))
