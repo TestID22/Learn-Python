@@ -17,17 +17,31 @@ def getNames(html):
         names.append(td.text)                              
     return names
 
-def soCollFunc(url):
-    html = getHtml(url)
-    llinks = getNames(html)
+#def soCollFunc(url):
+#    html = getHtml(url)
+#    llinks = getNames(html)
+
+def saveText(links):
+    cname = open('curname.txt', 'w')
+    for link in links:
+        cname.write(str(link + '\n'))
+    cname.close
+    
+
+#def readcname(cname):
+#    with open(cname, 'wb') as f:
+#        f.read()
+#        print(f.read())
+
+
 
 def main():
     html = getHtml(url)
     links = getNames(html)
-    print(links)
+    fname = saveText(links)
     
-    with pool(10) as p:
-        p.map(soCollFunc)
+    #with pool(2) as p:
+    #      p.map(soCollFunc)
 
 if __name__ == "__main__":
     main()
