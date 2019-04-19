@@ -7,7 +7,7 @@ def get_html(url):
     return html.text
 
 def get_data(html):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, 'html.parser')
     get_city = soup.find('div', class_='cityName').find('h1').text
     get_temp = soup.find('p', class_='today-temp').text
     get_text = soup.find('div', class_='description').text
