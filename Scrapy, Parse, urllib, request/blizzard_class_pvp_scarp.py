@@ -17,9 +17,10 @@ def get_name_links(html):
    
 def get_data(html):
     soup = BeautifulSoup(html)
+    find_name = soup.find('a', class_='Link CharacterHeader-name').text 
     find_class = soup.find('div', class_='CharacterHeader-detail').text
-
-    return find_class
+    
+    return find_name + find_class
 
 def main():
     url = 'https://worldofwarcraft.com/en-us/game/pvp/leaderboards/2v2' 
@@ -29,6 +30,7 @@ def main():
         html_name = get_html(link)
         data = get_data(html_name)
         print(data)
-
+        formated_data = data.split()
+        
 if __name__ == "__main__":
     main()
