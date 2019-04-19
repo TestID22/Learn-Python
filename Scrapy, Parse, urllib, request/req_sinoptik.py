@@ -21,7 +21,7 @@ def main():
     print('\n' + data[0] + '\n')
     print(data[2])
     print('Температура воздуха:', data[1])
-    input('Нажми "Enter" для выхода.')
+    input('\n  Нажми "Enter" для выхода.')
 
 if __name__ == "__main__":
     main()
