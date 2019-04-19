@@ -1,6 +1,6 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-
+#Скрапаем валютные пары
 site = urlopen('https://www.finanz.ru/valyuty/v-realnom-vremeni')
 soup = BeautifulSoup(site)
 exchange = soup.find('table',{'class':'quote_list'}).find_all('a')
