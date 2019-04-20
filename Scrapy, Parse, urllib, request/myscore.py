@@ -9,7 +9,8 @@ def get_html(url):
 
 def get_game(html):
     soup = BeautifulSoup(html, 'html.parser')
-    get_table = soup.select('span', class_='padr')
+    get_table = soup.select('span')
+    
     return get_table
 
 def main():
