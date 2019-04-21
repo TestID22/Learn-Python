@@ -1,4 +1,7 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome('D:\\chromedriver_win32\\chromedriver.exe')
-driver.get('https://www.google.com')
+d = webdriver.Chrome(r'D:\chromedriver_win32\chromedriver.exe')
+d.get('https://duckduckgo.com/')
+d.find_element_by_id('search_form_input_homepage')
+d.
