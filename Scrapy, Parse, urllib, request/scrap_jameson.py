@@ -33,6 +33,7 @@ def main():
     html_rozetka = get_html(url_rozetka)
     price_rozetka = get_my_wiskey(html_rozetka)
     print('Магазин Розетка\n', price_rozetka[0], '\nЦЕНА', price_rozetka[1])
+    input('Нажмите "Enter" для выхода')
 
 
 if __name__ == "__main__":
