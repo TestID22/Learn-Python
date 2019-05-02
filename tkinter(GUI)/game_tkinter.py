@@ -4,8 +4,9 @@ import time
 import random
 
 class Ball():
-    def __init__(self, canvas, color):
+    def __init__(self, canvas, paddle, color):
         self.canvas = canvas
+        self.paddle = paddle
         self.id = canvas.create_oval(10,10,25,25, fill = color)
         self.canvas.move(self.id, 200, 100) # двигаем объект
         #Управление движением шаром, в главном цикле игры будет отображаеться 
@@ -15,6 +16,14 @@ class Ball():
         random.shuffle(start)
         self.x = start[0]
         self.canvas_height = self.canvas.winfo_height()
+        
+    def hit_paddle(self, pos):
+        paddle_pos = self.canvas.coords(self.paddle.id)######????
+        if pos[2] >= paddle_pos[0] and pos[0] <= paddle_pos[2]:
+            if pos[3] >= paddle_pos[1] and pos[3] <=paddle_pos[3]:
+                return True
+        return False
+
 
     def draw(self):
         self.canvas.move(self.id, self.x, self.y)
@@ -24,6 +33,8 @@ class Ball():
         if pos[1] <= 0:
             self.y = 1
         if pos[3] >= 400:
+            self.y = -1
+        if self.hit_paddle(pos) == True:
             self.y = -1
         if pos[0] <= 0:
             self.x = 1
@@ -60,8 +71,8 @@ tk.wm_attributes("-topmost", 1)
 canvas = Canvas(tk, width=500, height=400, bd=0, highlightthickness = 0)
 canvas.pack()
 
-ball = Ball(canvas, 'green')
 pad = Paddle(canvas, 'red')
+ball = Ball(canvas, pad, 'green')
 while True:
     tk.update()
     ball.draw()
