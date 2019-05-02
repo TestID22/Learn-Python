@@ -7,7 +7,8 @@ class Ball():
         self.canvas = canvas
         self.id = canvas.create_oval(10,10,25,25, fill = color)
         self.canvas.move(self.id, 245, 100)
-        
+        #Управление движением шаром, в главном цикле игры будет отображаеться 
+        #перемещение шара на self.x и sel.y координат соответвенно
         self.y = -1
         start = [-3,2,1,-2,-1,3]
         random.shuffle(start)
@@ -32,15 +33,21 @@ class Paddle():
         self.canvas.move(self.id, 200, 300)
         #не работает движение ракетки
         self.x = 0
-        self.canvas.bind_all('<KeyPress-Left>', self.turn_left)
+        self.canvas.bind_all('<KeyPress-Left>', self.turn_left)#биндим кнопки 
+        self.canvas.bind_all('<KeyPress-Right>', self.turn_right)
 
     def draw(self):
-        pass    
+        self.canvas.move(self.id, self.x, 0) #берём объект созданные в Конструкторе класса Paddle
+        pos = self.canvas.coords(self.id) #берём координаты объекта ракетки self.id
+        if pos[0] <= 0:
+            self.x = 0
+        if pos[2] >= 500:
+            self.x = 0
     
-    def turn_left(self, evt):
+    def turn_left(self, evt):# почему здесьб evt - event -отслеживает событие, нажатие клавиши
         self.x = -1
     
-    def turn_right(self):
+    def turn_right(self, evt):
         self.x = 1
 
 tk = Tk()
