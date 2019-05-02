@@ -9,7 +9,7 @@ pygame.display.set_caption('My Asleep Reflections')
 class Main():
     def __init__(self,screen):
         self.screen = screen
-        self.back = pygame.image.load('D:\Code\Python\Projects\OOP Games\\1.jpg')
+        self.back = pygame.image.load(r'D:\Code\Python\pygame\OOP Games (my asleep reflection)\\1.jpg')
         self.player = Player()
         self.main_loop()
         
@@ -36,4 +36,4 @@ class Main():
             self.render()
 
             
-main = Main(screen) 
+main = Main(screen)
