@@ -1,4 +1,5 @@
 from tkinter import *
+import sys
 import time
 import random
 
@@ -6,7 +7,7 @@ class Ball():
     def __init__(self, canvas, color):
         self.canvas = canvas
         self.id = canvas.create_oval(10,10,25,25, fill = color)
-        self.canvas.move(self.id, 245, 100)
+        self.canvas.move(self.id, 200, 100) # двигаем объект
         #Управление движением шаром, в главном цикле игры будет отображаеться 
         #перемещение шара на self.x и sel.y координат соответвенно
         self.y = -1
@@ -17,7 +18,9 @@ class Ball():
 
     def draw(self):
         self.canvas.move(self.id, self.x, self.y)
-        pos = self.canvas.coords(self.id)
+        pos = self.canvas.coords(self.id) 
+        #переменная пос хранит координаты объекта
+        #в виде списка из 4 координат [0],[2] - x , [1],[3] - y
         if pos[1] <= 0:
             self.y = 1
         if pos[3] >= 400:
@@ -45,13 +48,13 @@ class Paddle():
             self.x = 0
     
     def turn_left(self, evt):# почему здесьб evt - event -отслеживает событие, нажатие клавиши
-        self.x = -1
+        self.x = - 2 #handle pad
     
     def turn_right(self, evt):
-        self.x = 1
+        self.x = 2
 
-tk = Tk()
-tk.title('GameOfThrones')#Заголовок окна
+tk = Tk() #create Tkinter object
+tk.title('Арканоид, но не совсем')#Заголовок окна
 tk.resizable(0,0) #Неизменяемый размер окна
 tk.wm_attributes("-topmost", 1)
 canvas = Canvas(tk, width=500, height=400, bd=0, highlightthickness = 0)
