@@ -16,6 +16,7 @@ class Ball():
         random.shuffle(start)
         self.x = start[0]
         self.canvas_height = self.canvas.winfo_height()
+        self.hit_bottom = False
         
     def hit_paddle(self, pos):
         paddle_pos = self.canvas.coords(self.paddle.id)######????
@@ -33,7 +34,9 @@ class Ball():
         if pos[1] <= 0:
             self.y = 1
         if pos[3] >= 400:
-            self.y = -1
+            self.hit_bottom == True
+            self.y = 0
+            self.x = 0
         if self.hit_paddle(pos) == True:
             self.y = -1
         if pos[0] <= 0:
@@ -55,7 +58,7 @@ class Paddle():
         pos = self.canvas.coords(self.id) #берём координаты объекта ракетки self.id
         if pos[0] <= 0:
             self.x = 0
-        if pos[2] >= 500:
+        elif pos[2] >= 500:
             self.x = 0
     
     def turn_left(self, evt):# почему здесьб evt - event -отслеживает событие, нажатие клавиши
@@ -74,8 +77,10 @@ canvas.pack()
 pad = Paddle(canvas, 'red')
 ball = Ball(canvas, pad, 'green')
 while True:
+    if ball.hit_bottom == False:
+        ball.draw()
+        pad.draw()
+    tk.update_idletasks()
     tk.update()
-    ball.draw()
-    pad.draw()
     time.sleep(0.01)
     
