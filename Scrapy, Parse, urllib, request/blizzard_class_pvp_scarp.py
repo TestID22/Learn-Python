@@ -14,7 +14,7 @@ def get_name_links(html):
         full_url = 'https://worldofwarcraft.com' + a
         links.append(full_url)
     return links
-   
+#парсит имена и класс
 def get_data(html):
     soup = BeautifulSoup(html, "html.parser")
     find_name = soup.find('a', class_='Link CharacterHeader-name').text 
@@ -30,9 +30,10 @@ def main():
         html_name = get_html(link)
         data = get_data(html_name)
         #print(data)
-        formated_data = data.split()
-        name, *race, spec, clas = formated_data
-        print(name.strip('120'), spec, clas, race[:2])
-
+        #formated_data = data.split()
+        #end_data = name.strip('120'), spec, clas, race[:2]
+        fo = open('data_wow.txt', 'a')
+        fo.write(data + '\n')
+        
 if __name__ == "__main__":
     main()
