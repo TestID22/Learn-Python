@@ -1,5 +1,5 @@
 import unittest
-from func_than_i_testing import get_formated_name
+from func_than_i_testing01 import get_formated_name
 
 class NameTestCase(unittest.TestCase):
     def test_first_last_name(self):
