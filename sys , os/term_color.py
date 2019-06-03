@@ -27,7 +27,7 @@ while True:
         #os.system("ftp") // to do. написать скрипт для проверки версии ФТП клиента
     elif change == "2":
         os.system("color 2b")
-        os.system("telnet")
+    
     elif change == "3":
         os.system("color 9C")
     elif change == "4":
