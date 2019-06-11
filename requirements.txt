@@ -2,7 +2,7 @@ beautifulsoup4==4.7.1
 bs4==0.0.1
 certifi==2019.3.9
 chardet==3.0.4
-Django==2.2.1
+Django==2.2.2
 idna==2.8
 Pillow==6.0.0
 PyAutoGUI==0.9.42
