@@ -10,6 +10,6 @@ msg['To'] = 'vitaliiseptember@gmail.com'
 s = smtplib.SMTP('smtp.gmail.com', 587)
 s.ehlo() #приветсвие
 s.starttls() #шифрование
-s.login('vitaliiseptember@gmail.com','mypass')
+s.login('vitaliiseptember@gmail.com','pass')
 s.send_message(msg)
 s.quit
