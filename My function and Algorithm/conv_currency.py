@@ -9,7 +9,7 @@ uuuuu a  a h   h     tt    ooooooo    $$$$$$  $$$$$  $$$$
 
 
 print("Конвертер Гривны в Долар и Обратно")
-uah_per_usd = 0.038
+uah_per_usd = 0.038 #Cried when saw it
 cost = float(input("Введите вашу сумму "))
 currency = input("Введите для гривны 'g' для доляра 'd' ")
 
