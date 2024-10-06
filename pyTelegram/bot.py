@@ -5,7 +5,7 @@ from telebot import types
 
 bot = telebot.TeleBot(config.TOKEN)
 welcome = True
-phrases = ["Here it is your generated phrases"]
+phrases = ["Here it is your generated phrases", "just for test"]
 
 @bot.message_handler(content_types=['text'])
 def lalalal(message):
